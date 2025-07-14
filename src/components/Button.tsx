@@ -1,44 +1,46 @@
-import clsx from 'clsx';
-import React from 'react'
+import clsx from "clsx";
+import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { RiSendPlaneFill } from "react-icons/ri";
 
 
 interface ButtonsProps {
   value: string;
-  type?: 'button' | "submit" ;
-  variant?: 'rounded' | 'fullRounded';
+  type?: "button" | "submit";
+  variant?: "effects" | "simple";
   arrow?: boolean;
+  send?:boolean;
   className?: string;
   onclick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-
-
-const Button:React.FC<ButtonsProps> = ({
+const Button: React.FC<ButtonsProps> = ({
   value,
-  type = 'button',
-  variant = 'rounded',
-  className= '',
+  type = "button",
+  variant = "simple",
+  className = "",
   arrow = false,
+  send = false,
   onclick,
 }) => {
-
-  const BaseStyle = 'text-white flex items-center gap-2 text-lg py-1 px-4 rounded-lg bg-blue-500 cursor-pointer ease-out transition-all duration-200';  
+  const BaseStyle =
+    "flex items-center gap-2 py-1 px-5 rounded-lg group cursor-pointer bg-[#1C45E3] ease-out transition-all duration-200  shadow-md";
 
   const varientStyle = {
-    rounded : '',
-    fullRounded: ''
-  }
+    simple: "hover:-translate-y-1 text-[#1C45E3]",
+    effects: "rounded-3xl hover:bg-[#4030D9] hover:-translate-y-1 hover:gap-3",
+  };
 
   return (
-    <button 
-      aria-label='hello'
+    <button
+      aria-label="hello"
       type={type}
       onClick={onclick}
-      arrow
+      className={clsx(BaseStyle, className, varientStyle[variant])}
+    >
+      {value} {arrow && <FaArrowRight className="hover:translate:x-2" /> } {send && <RiSendPlaneFill />}
+    </button>
+  );
+};
 
-      className={clsx(BaseStyle,className, varientStyle[variant])}>{value} {arrow && <FaArrowRight />}</button>
-  )
-}
-
-export default Button
+export default Button;
