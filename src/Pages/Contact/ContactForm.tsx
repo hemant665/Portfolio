@@ -9,25 +9,26 @@ interface IFormInput {
   firstName: string;
   email: string;
   subject: string;
-  massage: string;
+  message: string;
 }
 
-const ContactForm:React.FC<IFormInput> = () => {
+const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    
+    reset
   } = useForm<IFormInput>({
     defaultValues: {
       firstName: "",
       email: "",
       subject: "",
-      massage: "",
+      message: "",
     },
   });
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     console.log(data);
+    reset()
   };
 
   return (
@@ -45,12 +46,13 @@ const ContactForm:React.FC<IFormInput> = () => {
             required={true}
           />
           <Input
-            {...register("email")}
+            {...register("email", { required: "Email is required", pattern: /^\S+@\S+$/i})}
             label="Email Address"
             placeholder="john@example.com"
             type="email"
             required={true}
           />
+          
         </div>
         <Input
           {...register("subject")}
@@ -60,11 +62,12 @@ const ContactForm:React.FC<IFormInput> = () => {
           required={true}
         />
         <Textarea
-          {...register("massage")}
+          {...register("message")}
           label="Your Message"
           placeholder="i'd like to discuss a project...."
           rows={7}
           required={true}
+
         />
         <div className="h-[3.1rem] text-xl">
           <Button

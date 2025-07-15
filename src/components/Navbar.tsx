@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full sticky top-0 flex justify-between items-center py-7 bg-[#F0F6FF] z-[1]">
-      <a href="#home"><h1 className="font-bold text-xl md:text-2xl text-[#1C45E3]">
+      <a href="#home" ><h1 className="font-bold text-xl md:text-2xl text-[#1C45E3]">
         Hemant Kumar
       </h1></a>
       <div className="hidden md:block">
