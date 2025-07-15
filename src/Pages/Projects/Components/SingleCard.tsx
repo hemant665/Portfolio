@@ -33,6 +33,7 @@ const SingleCard = () => {
           <ButtonCard />
           <ButtonCard />
           <ButtonCard />
+          <ButtonCard />
         </div>
 
         <div className="text-blue-700 font-semibold flex gap-2 transition-all group duration-300 items-center mt-1">

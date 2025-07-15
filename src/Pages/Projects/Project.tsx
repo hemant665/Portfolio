@@ -4,12 +4,13 @@ import SingleCard from "./Components/SingleCard";
 
 const Project = () => {
   return (
-    <motion.div
+    <motion.div 
+    id="work"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 1 }}
       viewport={{ once: true }}
-      className="w-full h-full flex flex-col items-center justify-center mt-45 "
+      className="w-full h-full flex flex-col items-center justify-center mt-45 scroll-mt-32"
     >
       <div className="bg-blue-700 w-[15rem] relative flex items-center justify-center ">
         <span className="h-0.5">
@@ -34,7 +35,7 @@ const Project = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
         viewport={{ once: true }}
-        className="grid md:grid-cols-3 gap-6 mt-10"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10"
       >
         <SingleCard />
         <SingleCard />

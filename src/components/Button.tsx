@@ -1,11 +1,12 @@
 import clsx from "clsx";
-import React from "react";
+import React, { Children } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
 
 
 interface ButtonsProps {
-  value: string;
+  children?: React.ReactNode;
+  value?: string;
   type?: "button" | "submit";
   variant?: "effects" | "simple";
   arrow?: boolean;
@@ -15,6 +16,7 @@ interface ButtonsProps {
 }
 
 const Button: React.FC<ButtonsProps> = ({
+  children,
   value,
   type = "button",
   variant = "simple",
@@ -38,7 +40,7 @@ const Button: React.FC<ButtonsProps> = ({
       onClick={onclick}
       className={clsx(BaseStyle, className, varientStyle[variant])}
     >
-      {value} {arrow && <FaArrowRight className="hover:translate:x-2" /> } {send && <RiSendPlaneFill />}
+      {value} {Children && children} {arrow && <FaArrowRight className="hover:translate:x-2" /> } {send && <RiSendPlaneFill />} 
     </button>
   );
 };

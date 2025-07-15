@@ -7,11 +7,12 @@ import HeroSection from "./HeroSection";
 import Quote from "./Quote/Quote";
 import Project from "./Projects/Project";
 import Contact from "./Contact/Contact";
+import Footer from "./Footer/Footer";
 
 const Home = () => {
   return (
     <div
-      className="w-full min-h-screen pb-20"
+      className="w-full min-h-screen pb-1"
       style={{ backgroundColor: "var(--primary-color)" }}
     >
       <motion.div
@@ -27,7 +28,7 @@ const Home = () => {
         <Quote />
         <Project />
         <Contact />
-        
+        <Footer />
       </motion.div>
     </div>
   );

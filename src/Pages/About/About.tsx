@@ -39,7 +39,7 @@ const cardDetails = [
 
 const About = () => {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center mt-45 ">
+    <div id="about" className="w-full h-full flex flex-col items-center justify-center mt-45 scroll-mt-32">
       <div className="bg-blue-700 w-[15rem] relative flex items-center justify-center ">
         <span className="h-0.5">
           <hr />
@@ -137,10 +137,9 @@ const About = () => {
             className="h-[2.6rem] "
           >
             <Button
-              value="Contact Me"
-              className="text-white h-full text-xl"
+              className="text-white h-full text-xl bg-gra"
               variant="effects"
-            />
+            ><a href="#contact">Contact Me</a></Button>
           </motion.div>
         </motion.div>
       </div>

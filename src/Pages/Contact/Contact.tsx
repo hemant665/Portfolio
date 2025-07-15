@@ -1,13 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import Input from "../../components/Input";
-import Textarea from "../../components/Textarea";
-import Button from "../../components/Button";
+// Icons
+import { FaLocationDot } from "react-icons/fa6";
+import { GrMail } from "react-icons/gr";
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import ContactForm from "./ContactForm";
+
+// Components
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contact" className="scroll-mt-32">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,40 +43,80 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
         viewport={{ once: true }}
-        className="w-full flex gap-4 mt-8"
+        className="w-full flex flex-col md:flex-row gap-4 mt-8"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
           viewport={{ once: true }}
-          className="w-1/3 rounded-2xl duration-200 p-7 bg-white shadow-xl hover:-translate-y-2 hover:shadow-blue-300"
+          className="w-full md:max-w-1/3 rounded-2xl duration-200 p-7 bg-white shadow-xl hover:-translate-y-2 hover:shadow-blue-300"
         >
-            <h2 className="text-2xl font-semibold">Contact Information</h2>
-            <div className="w-[4rem]  rounded-2xl"><hr className="h-1 bg-blue-700 border-0 mt-1"/></div>
-            
+          <h2 className="text-2xl font-semibold">Contact Information</h2>
+          <div className="w-[4rem]  rounded-2xl">
+            <hr className="h-1 bg-blue-700 border-0 mt-1" />
+          </div>
+
+          <div className="w-full flex flex-col gap-5 mt-6">
+            <div className="flex items-center group gap-5">
+              <span className="bg-blue-700 p-4 rounded-2xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                <FaLocationDot className="text-white text-xl " />
+              </span>
+              <div>
+                <h2>Location</h2>
+                <p className="text-zinc-500">Jhunjhunu (Rajasthan) , India</p>
+              </div>
+            </div>
+            <div className="flex items-center group gap-5">
+              <span className="bg-blue-700 p-4 rounded-2xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                <GrMail className="text-white text-xl " />
+              </span>
+              <div>
+                <h2>Email</h2>
+                <a
+                  href="mailto:hemant04kumawat@gmail.com"
+                  className=" text-blue-700 w-full"
+                >
+                  hemant04kumawat@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">Connect With Me</h3>
+              <div className="flex gap-4 mt-3 ">
+                <span className="bg-zinc-800 p-3 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zinc-500">
+                  <a href="https://github.com/hemant665" target="_blank">
+                    <FaGithub className="text-white text-3xl" />
+                  </a>
+                </span>
+                <span className="bg-blue-600 p-3 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500 ">
+                  <a
+                    href="https://www.linkedin.com/in/hemant-kumawat"
+                    target="_blank"
+                  >
+                    <FaLinkedin className="text-white text-3xl" />
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
           viewport={{ once: true }}
-          className=" w-2/3 rounded-2xl p-7 bg-white shadow-xl"
+          className="w-full md:w-2/3 rounded-2xl p-7 bg-white shadow-xl"
         >
-            <h2 className="text-2xl font-semibold">Send Me a Message</h2>
-            <div className="w-[4rem]  rounded-2xl"><hr className="h-1 bg-blue-700 border-0 mt-1"/></div>
+          <h2 className="text-2xl font-semibold">Send Me a Message</h2>
+          <div className="w-[4rem]  rounded-2xl">
+            <hr className="h-1 bg-blue-700 border-0 mt-1" />
+          </div>
 
-            <div className="mt-4 w-full flex flex-col gap-4">
-                  <div className="flex gap-2 w-full items-center ">
-                        <Input label="Your Name" placeholder="Jhon Doe" type="text"/>
-                        <Input label="Email Address" placeholder="john@example.com" type="email"/>
-                  </div>
-                  <Input label="Subject" placeholder="Project Inquiry" type="text" />
-                  <Textarea label="Your Message" placeholder="i'd like to discuss a project...." rows={7}/>
-                  <div className="h-[3.1rem] text-xl">
-                        <Button value="Send Message" className="text-white h-full" send/> 
-                  </div>
-            </div>
+          <ContactForm />
+          
         </motion.div>
       </motion.div>
     </div>

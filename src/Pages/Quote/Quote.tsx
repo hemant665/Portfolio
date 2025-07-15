@@ -9,7 +9,7 @@ const Quote = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 1, duration: 1 }}
       viewport={{ once: true }}
-      className="w-[45rem] mx-auto bg-white mt-10 rounded-2xl p-5"
+      className=" md:w-[45rem] mx-auto bg-white mt-10 rounded-2xl p-5"
     >
       <div className="flex justify-start">
         <FaQuoteLeft className="text-blue-300" />

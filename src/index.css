@@ -5,3 +5,6 @@
       --secondary-color: #1C45E3;
       --text-color: #ffffff;
 }
+html {
+  scroll-behavior: smooth;
+}
