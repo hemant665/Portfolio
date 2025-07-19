@@ -4,9 +4,13 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 import HomeImg from "../assets/Images/herosections-DhS7Ncv1.png";
+import { Typewriter } from "react-simple-typewriter";
 const HeroSection = () => {
   return (
-    <div id="home" className="w-full h-full grid grid-cols-1 md:grid-cols-2 mt-7 gap-4 overflow-hidden scroll-mt-20">
+    <div
+      id="home"
+      className="w-full h-full grid grid-cols-1 md:grid-cols-2 mt-7 gap-4 overflow-hidden scroll-mt-20"
+    >
       <div className="w-full h-full flex flex-col gap-3 lg:gap-5 xl:gap-9">
         <div className="flex">
           <h1 className="bg-white px-5 py-2 text-[#1C45E3] rounded-4xl">
@@ -18,8 +22,16 @@ const HeroSection = () => {
           <h1 className="text-[#1C45E3]">Hemant Kumar</h1>
         </div>
 
-        <h1 className="text-[#4A5565] text-xl md:text-2xl lg:text-4xl">
-          Full Stack Developer
+        <h1 className="text-[#4A5565] text-xl md:text-2xl lg:text-4xl font-bold">
+          <Typewriter
+            words={["Full Stack Developer", "Web Developer", "MERN Stack Developer"]}
+            loop={false}
+            cursor
+            cursorStyle="|"
+            typeSpeed={40}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />
         </h1>
 
         <p className="text-sm md:text-md lg:text-xl">
@@ -32,19 +44,26 @@ const HeroSection = () => {
             arrow
             className="text-white text w-[10rem] h-[3rem]"
             variant="effects"
-          ><a href="#contact">Contact Me</a></Button>
-          <Button className="bg-white h-[3rem] w-[9rem]" variant="simple" ><a href="#work">View Works</a></Button>
+          >
+            <a href="#contact">Contact Me</a>
+          </Button>
+          <Button className="bg-white h-[3rem] w-[9rem]" variant="simple">
+            <a href="#work">View Works</a>
+          </Button>
         </div>
         <div className="flex gap-4 p-2">
-            <span className="bg-white p-2 rounded-lg text-3xl hover:-translate-y-1 duration-300 hover:shadow-blue-700 shadow-sm hover:shadow-md">
-                  <a href="https://www.linkedin.com/in/hemant-kumawat" target="_blank">
-                        <FaLinkedin className="text-blue-700 bg-white rounded" />
-                  </a>
-            </span>
+          <span className="bg-white p-2 rounded-lg text-3xl hover:-translate-y-1 duration-300 hover:shadow-blue-700 shadow-sm hover:shadow-md">
+            <a
+              href="https://www.linkedin.com/in/hemant-kumawat"
+              target="_blank"
+            >
+              <FaLinkedin className="text-blue-700 bg-white rounded" />
+            </a>
+          </span>
 
           <span className="bg-white p-2 rounded-lg text-3xl hover:-translate-y-1 duration-300 shadow-sm hover:shadow-black hover:shadow-md">
             <a href="https://github.com/hemant665" target="_blank">
-            <FaGithub className="bg-white rounded" />
+              <FaGithub className="bg-white rounded" />
             </a>
           </span>
         </div>
