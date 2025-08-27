@@ -76,7 +76,7 @@ const Contact = () => {
                   href="mailto:hemant04kumawat@gmail.com"
                   className=" text-blue-700 w-full"
                 >
-                  hemant04kumawat@gmail.com
+                  Hemant04kumawat@gmail.com
                 </a>
               </div>
             </div>

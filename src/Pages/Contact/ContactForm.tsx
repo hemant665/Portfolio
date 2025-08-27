@@ -23,20 +23,21 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<IFormInput> = () => {
-    // console.log(data);
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    console.log("data: ",data);
     setIsDisable(true);
 
-    // const subject = encodeURIComponent(data.subject);
-    // const body = encodeURIComponent(
-    //   `Name: ${data.firstName}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
-    // );
+    const subject = encodeURIComponent(data.subject);
+    const body = encodeURIComponent(
+      `Hi Hemant, \n\n${data.firstName} this side \n${data.message}\nLooking forward to your response.\n\n Best regards,\n ${data.firstName}\n ${data.email} `
+    );
 
-    // const email = "pylsingh1209@gmail.com"; // <-- replace with your email
-    // const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+    const email = "hemant04kumawat@gmail.com"; // <-- replace with your email
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
 
-    // // open default mail client
-    // window.location.href = mailtoLink;
+    // open default mail client
+    window.location.href = mailtoLink;
+
     reset();
     setTimeout(() => {
       setIsDisable(false)
