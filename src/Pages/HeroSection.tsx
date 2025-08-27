@@ -16,7 +16,7 @@ const HeroSection = () => {
             Full Stack Developer
           </h1>
         </div>
-        <div className="text-4xl lg:text-6xl font-bold flex flex-col xl:flex-row gap-3 ">
+        <div className="text-4xl lg:text-6xl font-bold flex flex-col text-nowrap xl:flex-row gap-3 ">
           <h1>Hi, I'm</h1>
           <h1 className="text-[#1C45E3]">Hemant Kumar</h1>
         </div>
