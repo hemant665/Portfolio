@@ -1,5 +1,4 @@
-import { div } from "framer-motion/client";
-import React from "react";
+
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";

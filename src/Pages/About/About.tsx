@@ -1,6 +1,4 @@
-import React from "react";
 import { motion } from "framer-motion";
-
 import Card from "./Components/Card";
 import Button from "../../components/Button";
 
@@ -39,7 +37,7 @@ const cardDetails = [
 
 const About = () => {
   return (
-    <div id="about" className="w-full h-full flex flex-col items-center justify-center mt-45 scroll-mt-32">
+    <div id="about" className="w-full h-full flex flex-col items-center justify-center mt-25 scroll-mt-32">
       <div className="bg-blue-700 w-[15rem] relative flex items-center justify-center ">
         <span className="h-0.5">
           <hr />

@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../components/Button";
 
 
@@ -24,7 +23,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <Button className="text-white" variant="effects" ><a href="#contact">Let's Talk</a></Button>
+      <Button className="text-white" variant="effects" ><a href="tel: 918000192248">Let's Talk</a></Button>
     </div>
   );
 };

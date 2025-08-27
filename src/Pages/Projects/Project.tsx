@@ -1,16 +1,64 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 import SingleCard from "./Components/SingleCard";
+import TourGoTravelImg from "../../assets/Project/TourGoTravel.webp";
+import PortFolioImg from "../../assets/Project/PortFolioImg.png";
+import CohortProjectImg from "../../assets/Project/CohortProjectImg.png";
+export interface projectDetails {
+  ProjectImg: string;
+  name: string;
+  desc: string;
+  technology: string[];
+  link?: string;
+}
 
-const Project = () => {
+const projectLists: projectDetails[] = [
+  {
+    ProjectImg: CohortProjectImg,
+    name: "Productivity DashBoard",
+    desc: "An all-in-one productivity dashboard that combines to-do lists, daily planning, Pomodoro timer, goals, and motivational tools in one place.",
+    technology: ["HTML", "CSS", "Tailwind CSS ", "JavaScript"],
+    link: "https://github.com/hemant665/Productivity-DashBoard",
+  },
+  {
+    ProjectImg: PortFolioImg,
+    name: "PortFolio",
+    desc: "A personal portfolio website built with React and Tailwind CSS to showcase my projects, skills, and experience. It highlights my work as a frontend developer with a clean UI and responsive design.",
+    technology: [
+      "HTML",
+      "CSS",
+      "Tailwind CSS ",
+      "JavaScript",
+      "TypeScript",
+      "React",
+    ],
+    link: "",
+  },
+  {
+    ProjectImg: TourGoTravelImg,
+    name: "Tour Go Travel",
+    desc: "A responsive travel website built with React with TypeScript. It lets users explore destinations, view travel packages, and read blogs with smooth UI, fast performance, and modern design.",
+    technology: [
+      "HTML",
+      "CSS",
+      "Tailwind CSS ",
+      "JavaScript",
+      "TypeScript",
+      "React",
+    ],
+    link: "https://tourgotravel.in/",
+  },
+];
+
+const Project:React.FC= () => {
   return (
-    <motion.div 
-    id="work"
+    <motion.div
+      id="work"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 1 }}
       viewport={{ once: true }}
-      className="w-full h-full flex flex-col items-center justify-center mt-45 scroll-mt-32"
+      className="w-full h-full flex flex-col items-center justify-center mt-25 scroll-mt-32"
     >
       <div className="bg-blue-700 w-[15rem] relative flex items-center justify-center ">
         <span className="h-0.5">
@@ -37,9 +85,11 @@ const Project = () => {
         viewport={{ once: true }}
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10"
       >
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
+        {projectLists.map((project, index) => (
+          <div key={index}>
+            <SingleCard project={project} />
+          </div>
+        ))}
       </motion.div>
     </motion.div>
   );

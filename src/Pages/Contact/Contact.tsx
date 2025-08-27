@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 // Icons
@@ -18,7 +17,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
         viewport={{ once: true }}
-        className="w-full h-full flex flex-col items-center justify-center mt-45 "
+        className="w-full h-full flex flex-col items-center justify-center mt-25 "
       >
         <div className="bg-blue-700 w-[15rem] relative flex items-center justify-center ">
           <span className="h-0.5">

@@ -1,9 +1,9 @@
-import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 import Input from "../../components/Input";
 import Textarea from "../../components/Textarea";
 import Button from "../../components/Button";
+import { useState } from "react";
 
 interface IFormInput {
   firstName: string;
@@ -13,11 +13,8 @@ interface IFormInput {
 }
 
 const ContactForm = () => {
-  const {
-    register,
-    handleSubmit,
-    reset
-  } = useForm<IFormInput>({
+  const [isDisable, setIsDisable] = useState(false)
+  const { register, handleSubmit, reset } = useForm<IFormInput>({
     defaultValues: {
       firstName: "",
       email: "",
@@ -26,9 +23,24 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log(data);
-    reset()
+  const onSubmit: SubmitHandler<IFormInput> = () => {
+    // console.log(data);
+    setIsDisable(true);
+
+    // const subject = encodeURIComponent(data.subject);
+    // const body = encodeURIComponent(
+    //   `Name: ${data.firstName}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+    // );
+
+    // const email = "pylsingh1209@gmail.com"; // <-- replace with your email
+    // const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+
+    // // open default mail client
+    // window.location.href = mailtoLink;
+    reset();
+    setTimeout(() => {
+      setIsDisable(false)
+    },4000)
   };
 
   return (
@@ -46,13 +58,15 @@ const ContactForm = () => {
             required={true}
           />
           <Input
-            {...register("email", { required: "Email is required", pattern: /^\S+@\S+$/i})}
+            {...register("email", {
+              required: "Email is required",
+              pattern: /^\S+@\S+$/i,
+            })}
             label="Email Address"
             placeholder="john@example.com"
             type="email"
             required={true}
           />
-          
         </div>
         <Input
           {...register("subject")}
@@ -67,14 +81,14 @@ const ContactForm = () => {
           placeholder="i'd like to discuss a project...."
           rows={7}
           required={true}
-
         />
         <div className="h-[3.1rem] text-xl">
           <Button
-            value="Send Message"
-            className="text-white h-full"
+            value={`${isDisable? "Sending...." : "Send Message"}`}
+            className={`h-full ${isDisable ? "text-white/40":"text-white "}`}
             send
             type="submit"
+            isDisable={isDisable}
           />
         </div>
       </form>

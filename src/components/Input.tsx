@@ -32,7 +32,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   }
 );
 
-// ✅ This is required for proper type detection
 Input.displayName = 'Input';
 
 export default Input;

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
 import { motion } from "framer-motion";

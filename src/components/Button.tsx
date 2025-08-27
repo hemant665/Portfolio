@@ -12,6 +12,7 @@ interface ButtonsProps {
   arrow?: boolean;
   send?:boolean;
   className?: string;
+  isDisable?: boolean;
   onclick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -23,6 +24,7 @@ const Button: React.FC<ButtonsProps> = ({
   className = "",
   arrow = false,
   send = false,
+  isDisable,
   onclick,
 }) => {
   const BaseStyle =
@@ -39,6 +41,7 @@ const Button: React.FC<ButtonsProps> = ({
       type={type}
       onClick={onclick}
       className={clsx(BaseStyle, className, varientStyle[variant])}
+      disabled={isDisable}
     >
       {value} {Children && children} {arrow && <FaArrowRight className="hover:translate:x-2" /> } {send && <RiSendPlaneFill />} 
     </button>

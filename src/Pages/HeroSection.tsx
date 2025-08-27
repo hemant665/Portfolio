@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../components/Button";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -9,9 +8,9 @@ const HeroSection = () => {
   return (
     <div
       id="home"
-      className="w-full h-full grid grid-cols-1 md:grid-cols-2 mt-7 gap-4 overflow-hidden scroll-mt-20"
+      className="w-full h-full grid grid-cols-1 md:grid-cols-2 mt-10 md:mt-20 gap-4 overflow-hidden scroll-mt-20"
     >
-      <div className="w-full h-full flex flex-col gap-3 lg:gap-5 xl:gap-9">
+      <div className="w-full h-full flex flex-col gap-5 xl:gap-9">
         <div className="flex">
           <h1 className="bg-white px-5 py-2 text-[#1C45E3] rounded-4xl">
             Full Stack Developer
