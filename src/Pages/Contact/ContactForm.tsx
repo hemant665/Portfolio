@@ -50,7 +50,7 @@ const ContactForm = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="mt-4 w-full flex flex-col gap-4"
       >
-        <div className="w-full grid md:grid-cols-2  gap-7 ">
+        <div className="w-full grid lg:grid-cols-2  gap-7 ">
           <Input
             {...register("firstName")}
             label="Your Name"

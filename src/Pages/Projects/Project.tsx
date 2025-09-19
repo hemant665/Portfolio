@@ -48,7 +48,26 @@ const projectLists: projectDetails[] = [
     ],
     link: "https://tourgotravel.in/",
   },
+
 ];
+
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.6, // delay between each card
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+
 
 const Project:React.FC= () => {
   return (
@@ -56,7 +75,7 @@ const Project:React.FC= () => {
       id="work"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.5, duration: 1 }}
+      transition={{ delay: 0.3, duration: 1 }}
       viewport={{ once: true }}
       className="w-full h-full flex flex-col items-center justify-center mt-25 scroll-mt-32"
     >
@@ -79,16 +98,16 @@ const Project:React.FC= () => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}
+        variants={container}
+        initial="hidden"
+        whileInView="show"
         viewport={{ once: true }}
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10"
       >
         {projectLists.map((project, index) => (
-          <div key={index}>
+          <motion.div key={index} variants={item}>
             <SingleCard project={project} />
-          </div>
+          </motion.div>
         ))}
       </motion.div>
     </motion.div>

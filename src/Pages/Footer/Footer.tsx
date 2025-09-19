@@ -20,8 +20,8 @@ const Footer = () => {
       <div className="w-full flex items-center justify-center mt-7">
             <span className="hover:scale-110 hover:shadow-lg hover:shadow-purple-300 rounded-full"> <a href="#home"><FaArrowUp className="text-white rounded-full p-3 bg-gradient-to-tr from-blue-600 to-purple-400 text-5xl"/></a></span>
       </div>
-      <div className="w-full flex items-center gap-15 mt-15 pb-10">
-        <div className="w-1/2">
+      <div className="w-full flex flex-col md:flex-row items-center gap-15 mt-15 pb-10">
+        <div className="w-full  sm:w-1/2">
           <div className="flex flex-col gap-3">
             <h1 className="text-blue-700 text-3xl font-semibold">
               Hemant Kumar
@@ -54,7 +54,7 @@ const Footer = () => {
           <div></div>
         </div>
 
-        <div className="w-1/2 flex">
+        <div className="w-full sm:w-1/2 flex ">
           <div className="w-full">
             <h2 className="font-semibold text-xl">Quick Links</h2>
             <span>

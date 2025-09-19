@@ -15,7 +15,7 @@ const Contact = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}
+        transition={{ delay: 0.2, duration: 1 }}
         viewport={{ once: true }}
         className="w-full h-full flex flex-col items-center justify-center mt-25 "
       >
@@ -40,23 +40,24 @@ const Contact = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}
+        transition={{ delay: 0.2, duration: 1 }}
         viewport={{ once: true }}
-        className="w-full flex flex-col md:flex-row gap-4 mt-8"
+        className="w-full grid lg:grid-cols-[40%_60%] gap-4 mt-8"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ delay: 0.2, duration: 1 }}
           viewport={{ once: true }}
-          className="w-full md:max-w-1/3 rounded-2xl duration-200 p-7 bg-white shadow-xl hover:-translate-y-2 hover:shadow-blue-300"
+          className="w-full  rounded-2xl duration-200 p-7 bg-white shadow-xl hover:-translate-y-2 hover:shadow-blue-300"
         >
           <h2 className="text-2xl font-semibold">Contact Information</h2>
           <div className="w-[4rem]  rounded-2xl">
             <hr className="h-1 bg-blue-700 border-0 mt-1" />
           </div>
 
-          <div className="w-full flex flex-col gap-5 mt-6">
+          <div className="w-full flex flex-col  gap-5 mt-6">
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-5">
             <div className="flex items-center group gap-5">
               <span className="bg-blue-700 p-4 rounded-2xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
                 <FaLocationDot className="text-white text-xl " />
@@ -74,11 +75,12 @@ const Contact = () => {
                 <h2>Email</h2>
                 <a
                   href="mailto:hemant04kumawat@gmail.com"
-                  className=" text-blue-700 w-full"
+                  className=" text-blue-700 w-full "
                 >
                   Hemant04kumawat@gmail.com
                 </a>
               </div>
+            </div>
             </div>
 
             <div>
@@ -107,7 +109,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
           viewport={{ once: true }}
-          className="w-full md:w-2/3 rounded-2xl p-7 bg-white shadow-xl"
+          className="w-full rounded-2xl p-7 bg-white shadow-xl"
         >
           <h2 className="text-2xl font-semibold">Send Me a Message</h2>
           <div className="w-[4rem]  rounded-2xl">

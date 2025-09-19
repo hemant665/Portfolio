@@ -17,9 +17,7 @@ const Navbar = () => {
       <div className="hidden md:block">
         <ul className="flex gap-7">
           {NavElements.map((item, indx) => (
-            // <li key={indx}>
-              <a key={indx} href={item.link}>{item.title}</a>
-            // </li>
+              <a key={indx} href={item.link} className="hover:text-blue-600">{item.title}</a>
           ))}
         </ul>
       </div>

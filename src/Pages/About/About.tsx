@@ -59,7 +59,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ delay: 0.2, duration: 1 }}
           viewport={{ once: true }}
           className="rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.35)] shadow-blue-300 max-w-[28rem] flex items-center justify-center mx-auto duration-300 hover:-translate-y-2 overflow-hidden§"
         >
@@ -72,14 +72,14 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ delay: 0.2, duration: 1 }}
           viewport={{ once: true }}
           className="flex flex-col p-5 mx-auto gap-5"
         >
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
             viewport={{ once: true }}
             className="font-semibold text-2xl"
           >
@@ -89,7 +89,7 @@ const About = () => {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
             viewport={{ once: true }}
             className="leading-relaxed"
           >
@@ -101,7 +101,7 @@ const About = () => {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
             viewport={{ once: true }}
             className="leading-relaxed"
           >
@@ -113,7 +113,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
             viewport={{ once: true }}
             className="grid  md:grid-cols-2 gap-5 mt-5"
           >
@@ -130,7 +130,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
             viewport={{ once: true }}
             className="h-[2.6rem] "
           >

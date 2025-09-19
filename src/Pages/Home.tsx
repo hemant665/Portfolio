@@ -18,7 +18,7 @@ const Home = () => {
       <motion.div
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
         viewport={{ once: true }}
         className="w-full xl:w-[80rem] mx-auto h-full py-2 px-3 "
       >
