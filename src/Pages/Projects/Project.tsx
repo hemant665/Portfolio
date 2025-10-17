@@ -4,6 +4,7 @@ import SingleCard from "./Components/SingleCard";
 import TourGoTravelImg from "../../assets/Project/TourGoTravel.webp";
 import PortFolioImg from "../../assets/Project/PortFolioImg.png";
 import CohortProjectImg from "../../assets/Project/CohortProjectImg.png";
+import AabeliTea from "../../assets/Project/AabeliTea.png"
 export interface projectDetails {
   ProjectImg: string;
   name: string;
@@ -48,6 +49,19 @@ const projectLists: projectDetails[] = [
     ],
     link: "https://tourgotravel.in/",
   },
+  {
+    ProjectImg: AabeliTea,
+    name: "Tea E-Commerce Website",
+    desc: "An online platform for exploring and purchasing a variety of premium teas. It offers a smooth shopping experience with features like product browsing, cart management, and secure checkout",
+    technology: [
+      "JavaScript",
+      "Tailwind CSS ",
+      "React",
+      "Motion",
+      "Rest",
+    ],
+    link: "https://aabelitea.com/",
+  },
 
 ];
 
@@ -57,7 +71,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.6, // delay between each card
+      staggerChildren: 0.6,
     },
   },
 };
